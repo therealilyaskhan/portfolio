@@ -1,22 +1,28 @@
+import { useState, useEffect } from "react";
+import Image from "next/image";
+
 export default function Testimonial({ client }) {
+  const [dynamicBgColor, setDynamicBgColor] = useState();
+
+  useEffect(() => {
+    setDynamicBgColor({
+      backgroundColor:
+        "#" +
+        Math.floor(Math.random() * 16777215)
+          .toString(16)
+          .padStart(6, "0"),
+    });
+  }, []);
+
   const { image, name, country, review, countryFlag } = client;
   return (
     <div data-aos="zoom-in" className="testimonials__card">
       <div className="testimonials__user">
         <div className="testimonials__img-wrapper">
           {image.src ? (
-            <img src={image.src} alt={name} className="testimonials__img" />
+            <Image src={image.src} alt={name} className="testimonials__img" />
           ) : (
-            <span
-              className="testimonials__no-img"
-              style={{
-                backgroundColor:
-                  "#" +
-                  Math.floor(Math.random() * 16777215)
-                    .toString(16)
-                    .padStart(6, "0"),
-              }}
-            >
+            <span className="testimonials__no-img" style={dynamicBgColor}>
               {name.substring(0, 1)}
             </span>
           )}
@@ -24,11 +30,11 @@ export default function Testimonial({ client }) {
         <div className="testimonials__info">
           <div className="testimonials__username paragraph--large">{name}</div>
           <div className="testimonials__country">
-            <img
+            <Image
               className="testimonials__country-flag"
               src={countryFlag.src}
               alt={country}
-            ></img>
+            ></Image>
             <div className="testimonials__country-name paragraph--small">
               {country}
             </div>

@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useRef } from "react";
+
 import Testimonial from "./Testimonial";
 import previous from "../../public/svg/previous.svg";
 import next from "../../public/svg/nextIcon.svg";
@@ -462,12 +463,12 @@ export default function Testimonials() {
             data-aos="fade-up"
             className="testimonials__title heading--primary"
           >
-            Over 90+ Happy clients'
+            Over 90+ Happy clients&#39;
           </div>
           <swiper-container init="false" ref={swiperRef}>
             {clients.map((client, index) => (
-              <swiper-slide class="testimonials__slide">
-                <Testimonial key={index} client={client} />
+              <swiper-slide key={index} class="testimonials__slide">
+                <Testimonial client={client} />
               </swiper-slide>
             ))}
           </swiper-container>
@@ -475,11 +476,13 @@ export default function Testimonials() {
             <img
               src={previous.src}
               className="swiper-button-prev testimonials__prev"
+              alt="previous"
             />
             <div className="testimonials__pagination paragraph--small" />
             <img
               src={next.src}
               className="swiper-button-next testimonials__next"
+              alt="next"
             />
           </div>
         </div>

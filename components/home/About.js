@@ -27,7 +27,7 @@ export default function About() {
               I am a Level 2 seller on Fiverr with an outstanding track record.
               With over 90+ satisfied clients worldwide and a consistent
               five-star rating, I take great pride in delivering exceptional
-              service. I'm Passionate, hardworking, and open to opportunities. I
+              service. I&#39;m Passionate, hardworking, and open to opportunities. I
               have been exploring web technologies since 2018.
             </div>
             <div className="about__list">

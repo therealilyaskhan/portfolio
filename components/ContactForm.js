@@ -32,12 +32,6 @@ export default function ContactForm() {
         if (response.ok) {
           const data = await response.json();
           console.log("Form submitted successfully:", data);
-          if (data.message === "ok") {
-            setName("");
-            setEmail("");
-            setMsg("");
-            setLoading(false);
-          }
         } else {
           console.error("Failed to submit form data:", response.status);
         }
@@ -66,7 +60,8 @@ export default function ContactForm() {
       <input
         className="contact__form--input form--input form--input--text"
         type="text"
-        placeholder="First name"
+        placeholder="Full name"
+        value={name}
         required
         onChange={(e) => setName(e.target.value)}
       />
@@ -74,6 +69,7 @@ export default function ContactForm() {
         className="contact__form--input form--input form--input--text"
         type="email"
         required
+        value={email}
         placeholder="Email address"
         onChange={(e) => setEmail(e.target.value)}
       />
@@ -81,6 +77,7 @@ export default function ContactForm() {
         className="contact__form--textarea form--input form--input--textarea"
         required
         rows="6"
+        value={msg}
         placeholder="Message"
         onChange={(e) => setMsg(e.target.value)}
       ></textarea>

@@ -21,17 +21,23 @@ export default function ContactForm() {
       };
 
       try {
-        const response = await fetch('https://calm-red-worm-toga.cyclic.app/', {
+        const response = await fetch("https://calm-red-worm-toga.cyclic.app/", {
           method: "POST",
           body: JSON.stringify(formData),
           headers: {
-            "Content-Type": "application/json"
-          }
+            "Content-Type": "application/json",
+          },
         });
 
         if (response.ok) {
           const data = await response.json();
           console.log("Form data submitted successfully:", data);
+          if (data.message === "success") {
+            setName("");
+            setEmail("");
+            setMsg("");
+            setLoading(false);
+          }
         } else {
           console.error("Failed to submit form data:", response.status);
         }

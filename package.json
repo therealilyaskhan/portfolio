@@ -2,6 +2,9 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "proxy": "https://calm-red-worm-toga.cyclic.app",
+  "engines": {
+    "node": "14.19.3"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",

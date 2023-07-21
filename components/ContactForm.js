@@ -32,7 +32,7 @@ export default function ContactForm() {
         if (response.ok) {
           const data = await response.json();
           console.log("Form data submitted successfully:", data);
-          if (data.message === "success") {
+          if (data.message === "ok") {
             setName("");
             setEmail("");
             setMsg("");

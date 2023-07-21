@@ -489,7 +489,7 @@ export default function Testimonials() {
 
         <div className="testimonials__evidence">
           <div className="testimonials__note">
-            <img src={infoIcon.src} className="testimonials__note-icon" />
+            <img alt="Information about testimonials" src={infoIcon.src} className="testimonials__note-icon" />
             <span className="testimonials__note-text paragraph--normal">
               All the testimonials are quoted straight from my Fiverr profile.
               Feel free to check out my Fiverr profile here:

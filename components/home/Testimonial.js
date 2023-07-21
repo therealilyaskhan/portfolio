@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 
+import { useState, useEffect } from "react";
 export default function Testimonial({ client }) {
   const [dynamicBgColor, setDynamicBgColor] = useState();
 
@@ -20,7 +20,7 @@ export default function Testimonial({ client }) {
       <div className="testimonials__user">
         <div className="testimonials__img-wrapper">
           {image.src ? (
-            <Image src={image.src} alt={name} className="testimonials__img" />
+            <img src={image.src} alt={name} className="testimonials__img" />
           ) : (
             <span className="testimonials__no-img" style={dynamicBgColor}>
               {name.substring(0, 1)}
@@ -30,11 +30,11 @@ export default function Testimonial({ client }) {
         <div className="testimonials__info">
           <div className="testimonials__username paragraph--large">{name}</div>
           <div className="testimonials__country">
-            <Image
+            <img
               className="testimonials__country-flag"
               src={countryFlag.src}
               alt={country}
-            ></Image>
+            />
             <div className="testimonials__country-name paragraph--small">
               {country}
             </div>

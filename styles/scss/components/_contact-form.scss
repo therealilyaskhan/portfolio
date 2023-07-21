@@ -1,0 +1,57 @@
+.contact__form {
+  margin-left: 10rem;
+  padding: 5rem;
+  box-shadow: -2px -2px 6px 0 rgba(0, 0, 0, 0.25),
+    2px 2px 6px 0 rgba(0, 0, 0, 0.25);
+  @include respond(tab-port) {
+    margin-left: 0;
+  }
+  &--title {
+    color: $text-dark;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  &--btn {
+    background-color: $primary-color;
+    color: $light-bg;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    width: 100%;
+    text-align: center;
+    font-size: $text-medium;
+    padding: 1rem;
+    cursor: pointer;
+    @include respond(phone) {
+      font-size: 2.2rem;
+      padding: 1.2rem;
+    }
+  }
+  &--btn:disabled {
+    @include respond(phone) {
+      padding: 1.2rem;
+    }
+  }
+}
+.loader {
+  border: 3px solid #f3f3f3; /* Light grey */
+  border-top: 3px solid transparent; /* Blue */
+  border-radius: 50%;
+  margin: auto;
+  width: 2rem;
+  height: 2rem;
+  animation: spin 2s linear infinite;
+  @include respond(phone) {
+    width: 2.35rem;
+    height: 2.35rem;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

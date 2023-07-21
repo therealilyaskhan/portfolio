@@ -1,0 +1,53 @@
+@import './scss/abstracts/variables';
+@import './scss/abstracts/mixins';
+
+.progress {
+  --scroll: 0%;
+  background: linear-gradient(
+    to right,
+    $accent-color var(--scroll),
+    transparent 0
+  );
+  width: 100%;
+  height: 4px;
+  z-index: 100;
+}
+.navbar {
+  // border-bottom: 3px solid $accent-color;
+  background-color: $dark-bg;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @include respond(phone) {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    list-style: none;
+    font-size: $text-small;
+    font-weight: 400;
+    color: $text-light;
+    letter-spacing: 2px;
+    justify-content: center;
+    @include respond(phone) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  &__item {
+    padding: 1.2rem 1.6rem;
+    &--link {
+      text-decoration: none;
+      color: $text-light;
+      //  &.active {
+      //   font-weight: 500;
+      //   color: $accent-color;
+      // }
+    }
+  }
+}

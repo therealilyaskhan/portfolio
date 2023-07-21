@@ -1,0 +1,25 @@
+.form--input {
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba($dark-bg, 0.2);
+  border-radius: 3px;
+  font-size: $text-medium;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+  @include respond(phone) {
+    font-size: $text-large;
+    padding: 1.2rem;
+    color: #555;
+    letter-spacing: 1px;
+  }
+}
+
+textarea {
+  resize: none;
+  font-family: inherit;
+  @include respond(phone) {
+    color: #555;
+    letter-spacing: 1px;
+  }
+}

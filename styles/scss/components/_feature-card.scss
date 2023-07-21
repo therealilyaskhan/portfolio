@@ -1,0 +1,41 @@
+.features__card-item {
+  border-radius: 5px;
+  flex: 1;
+  background-color: $white-color;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3.5rem 2.5rem;
+  &:not(:last-child) {
+    margin-right: 4.5rem;
+    @include respond(tab-port) {
+      margin-right: 0;
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+.features__card {
+  &--icon {
+    width: auto;
+    height: 6rem;
+    path,
+    circle {
+      fill: $primary-color;
+    }
+  }
+  &--title {
+    font-weight: 500;
+    color: $text-dark;
+    text-align: center;
+    margin-top: 5px;
+    padding: 1rem;
+    text-transform: capitalize;
+  }
+  &--paragraph {
+    text-transform: inherit;
+    color: $text-dark;
+  }
+}

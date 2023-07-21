@@ -1,0 +1,32 @@
+.heading--secondary {
+  font-size: $heading-small;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.heading--primary {
+  font-size: $heading-big;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.paragraph--normal {
+  font-size: $text-medium;
+  @include respond(phone) {
+    font-size: $text-large;
+  }
+}
+
+.paragraph--large {
+  font-size: $heading-small;
+  @include respond(phone) {
+    font-size: $text-xl;
+  }
+}
+
+.paragraph--small {
+  font-size: $text-small;
+  @include respond(phone) {
+    font-size: $text-large;
+  }
+}

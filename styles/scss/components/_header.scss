@@ -1,0 +1,76 @@
+.header {
+  background: url('../../../public/img/header-bg-min.jpg');
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  & .container {
+    @include respond(phone) {
+      // margin-left: 0;
+    }
+  }
+  &--sub-heading {
+    animation: moveInLeft 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+  &--primary-heading {
+    animation: moveInRight 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+  @include respond(phone) {
+    &--sub-heading {
+      margin-block-end: 1rem;
+    }
+    &--primary-heading {
+      font-size: 3.4rem;
+    }
+  }
+  &--content {
+    height: 100vh;
+    text-align: center;
+    display: grid;
+    color: $text-light;
+    line-height: 1.45;
+    @include respond(phone) {
+      // text-align: left;
+      line-height: 1.6;
+    }
+  }
+  .header__img {
+    border-radius: 100%;
+    width: 15rem;
+    height: 15rem;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: -4rem;
+    margin-bottom: 2rem;
+    animation: moveInTop 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+    @include respond(phone) {
+      margin-bottom: 3rem;
+    }
+    &--img {
+      margin-top: -0.5rem;
+      object-fit: cover;
+      width: 105%;
+      height: 105%;
+    }
+  }
+  &--sub-heading {
+  }
+  &--primary-heading {
+  }
+  &--highlight {
+    color: $accent-color;
+  }
+  &__btn {
+    margin-block-start: 1.8rem;
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+    &:hover svg {
+      transform: rotate(90deg);
+    }
+    @include respond(phone) {
+      margin-block-start: 2.5rem;
+    }
+  }
+}

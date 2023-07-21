@@ -1,0 +1,25 @@
+{
+  "name": "my-portfolio",
+  "version": "0.1.0",
+  "proxy": "https://calm-red-worm-toga.cyclic.app",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build-export": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "swiper": "^10.0.4"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.0.1",
+    "sass": "^1.37.5"
+  }
+}
